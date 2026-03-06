@@ -40,7 +40,7 @@ export default function LoginPage() {
             <div className="w-full max-w-md glass p-8 rounded-[2.5rem] shadow-2xl relative">
                 <div className="absolute top-0 right-0 p-4">
                     <Link href="/" className="text-gray-500 hover:text-white transition-colors">
-                        <span className="text-sm font-medium">මඟහරින්න</span>
+                        <span className="text-sm font-medium">Skip කරන්න</span>
                     </Link>
                 </div>
 
@@ -48,8 +48,8 @@ export default function LoginPage() {
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center mx-auto mb-6 shadow-xl shadow-indigo-500/20">
                         <Lock className="text-white" size={32} />
                     </div>
-                    <h1 className="text-3xl font-black font-outfit text-white mb-2">පිවිසෙන්න</h1>
-                    <p className="text-gray-400">ඔබගේ ගිණුමට ඇතුළු වී ඉගෙනුම දිගටම කරගෙන යන්න.</p>
+                    <h1 className="text-3xl font-black font-outfit text-white mb-2">Sign In</h1>
+                    <p className="text-gray-400">ඔබගේ Account එකට ඇතුළු වී දිගටම Learn කරන්න.</p>
                 </div>
 
                 <form onSubmit={handleLogin} className="space-y-6">
@@ -94,14 +94,14 @@ export default function LoginPage() {
                         disabled={loading}
                         className="w-full py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold text-lg shadow-lg shadow-indigo-500/25 hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-50 disabled:scale-100 flex items-center justify-center gap-3"
                     >
-                        {loading ? <Loader2 className="animate-spin" /> : "පිවිසෙන්න"}
+                        {loading ? <Loader2 className="animate-spin" /> : "Sign In වන්න"}
                     </button>
                 </form>
 
                 <p className="mt-8 text-center text-gray-400">
-                    ගිණුමක් නැද්ද?{" "}
+                    Account එකක් නැද්ද?{" "}
                     <Link href="/signup" className="text-indigo-400 font-bold hover:underline">
-                        අලුත් ගිණුමක් සාදන්න
+                        අලුත් Account එකක් සාදන්න
                     </Link>
                 </p>
             </div>

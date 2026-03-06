@@ -70,10 +70,10 @@ export default function SignupPage() {
                     <div className="w-20 h-20 rounded-3xl bg-green-500/20 flex items-center justify-center mx-auto border border-green-500/30">
                         <CheckCircle2 className="text-green-400" size={40} />
                     </div>
-                    <h2 className="text-3xl font-black font-outfit text-white">ලියාපදිංචිය සාර්ථකයි!</h2>
+                    <h2 className="text-3xl font-black font-outfit text-white">Registration සාර්ථකයි!</h2>
                     <p className="text-gray-400 leading-relaxed">අපි ඔයාගේ email ලිපිනයට තහවුරු කිරීමේ (Verification) පණිවිඩයක් එවලා තියෙන්නේ. කරුණාකර එය පරීක්ෂා කර බලන්න.</p>
                     <Link href="/login" className="block w-full py-4 rounded-2xl bg-white text-black font-bold text-lg hover:bg-gray-200 transition-all active:scale-95 shadow-xl shadow-white/10">
-                        පිවිසුම් පිටුවට යන්න
+                        Home Page එකට යන්න
                     </Link>
                 </div>
             </div>
@@ -89,8 +89,8 @@ export default function SignupPage() {
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center mx-auto mb-6 shadow-xl shadow-indigo-500/20">
                         <User className="text-white" size={32} />
                     </div>
-                    <h1 className="text-3xl font-black font-outfit text-white mb-2">ගිණුමක් සාදන්න</h1>
-                    <p className="text-gray-400">අදම එකතු වෙලා ඔයාගේ ඉගෙනුම් ගමන ආරම්භ කරන්න.</p>
+                    <h1 className="text-3xl font-black font-outfit text-white mb-2">Register වෙන්න</h1>
+                    <p className="text-gray-400">අදම Register වෙලා ඔයාගේ Learning Journey එක Start කරන්න.</p>
                 </div>
 
                 <form onSubmit={handleSignup} className="space-y-6">
@@ -151,14 +151,14 @@ export default function SignupPage() {
                         disabled={loading}
                         className="w-full py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold text-lg shadow-lg shadow-indigo-500/25 hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-50 disabled:scale-100 flex items-center justify-center gap-3"
                     >
-                        {loading ? <Loader2 className="animate-spin" /> : "ලියාපදිංචි වන්න"}
+                        {loading ? <Loader2 className="animate-spin" /> : "Register වන්න"}
                     </button>
                 </form>
 
                 <p className="mt-8 text-center text-gray-400">
-                    දැනටමත් ගිණුමක් තිබේද?{" "}
+                    දැනටමත් Account එකක් තිබේද?{" "}
                     <Link href="/login" className="text-indigo-400 font-bold hover:underline">
-                        පිවිසීමට මෙතන ඔබන්න
+                        Sign In වෙන්න මෙතන ඔබන්න
                     </Link>
                 </p>
             </div>

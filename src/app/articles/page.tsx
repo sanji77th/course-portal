@@ -22,11 +22,11 @@ export default async function ArticlesPage() {
                 <div className="mb-16">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-bold mb-4 uppercase tracking-widest">
                         <FileText size={14} />
-                        ලිපි සහ පුවත්
+                        Articles and Updates
                     </div>
                     <h1 className="text-4xl md:text-7xl font-black font-outfit text-white mb-6 animate-in slide-in-from-left duration-700">Explore Articles</h1>
                     <p className="text-gray-400 max-w-2xl text-lg md:text-xl leading-relaxed">
-                        තාක්ෂණය, අධ්‍යාපනය සහ වෘත්තීය දියුණුව පිළිබඳ කාලීන ලිපි සහ විස්තර.
+                        Technology, Education පිළිබඳ Articles සහ Updates.
                     </p>
                 </div>
 

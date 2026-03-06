@@ -21,19 +21,19 @@ export default async function VideoCoursesPage() {
                 <div className="mb-16">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-bold mb-4 uppercase tracking-widest">
                         <Video size={14} />
-                        වීඩියෝ පාඨමාලා
+                        Video Courses
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black font-outfit text-white mb-6 animate-in slide-in-from-left duration-700">Video Masterclasses</h1>
                     <p className="text-gray-400 max-w-2xl text-lg md:text-xl leading-relaxed">
-                        ප්‍රායෝගිකව ඉගෙන ගැනීමට අවශ්‍ය සියලුම වීඩියෝ පාඨමාලා සහ තාක්ෂණික උපදෙස් මෙතැනින් ලබාගන්න.
+                        ප්‍රායෝගිකව ඉගෙන ගැනීමට අවශ්‍ය සියලුම Video Courses.
                     </p>
                 </div>
 
                 {!courses || courses.length === 0 ? (
                     <div className="glass p-20 rounded-[3.5rem] text-center border-white/5 border-dashed">
                         <Play className="text-gray-800 mx-auto mb-6 shrink-0" size={64} />
-                        <h3 className="text-xl font-bold text-gray-500">වීඩියෝ පාඨමාලා නොමැත</h3>
-                        <p className="text-gray-600 mt-2">නව පාඨමාලා ඉක්මනින් එකතු කරනු ඇත.</p>
+                        <h3 className="text-xl font-bold text-gray-500">Video Courses නොමැත</h3>
+                        <p className="text-gray-600 mt-2">නව Video Courses ඉක්මනින් එකතු කරනු ඇත.</p>
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

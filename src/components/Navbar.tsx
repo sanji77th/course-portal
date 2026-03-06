@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 import { createClient } from "@/lib/supabase";
 
 const navItems = [
-    { name: "ලිපි", href: "/articles", icon: FileText },
-    { name: "පෙළ පාඨමාලා", href: "/text-courses", icon: BookOpen },
-    { name: "වීඩියෝ පාඨමාලා", href: "/video-courses", icon: Video },
+    { name: "Articles", href: "/articles", icon: FileText },
+    { name: "Text Courses", href: "/text-courses", icon: BookOpen },
+    { name: "Video Courses", href: "/video-courses", icon: Video },
 ];
 
 export default function Navbar() {
@@ -69,10 +69,7 @@ export default function Navbar() {
                 <div className="glass shadow-2xl rounded-full px-6 py-3 flex items-center justify-between border border-white/10">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2 group">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
-                            <span className="text-white font-bold text-xl">L</span>
-                        </div>
-                        <span className="text-white font-bold text-xl hidden sm:block font-outfit tracking-tighter">LMS.si</span>
+                        <span className="text-white font-bold text-xl font-outfit tracking-tighter">Latent Learning Spaze</span>
                     </Link>
 
                     {/* Desktop Nav */}

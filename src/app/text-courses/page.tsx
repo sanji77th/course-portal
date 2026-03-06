@@ -22,11 +22,11 @@ export default async function TextCoursesPage() {
                     <div className="mb-16">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-bold mb-4">
                             <Layers size={14} />
-                            පෙළ පාඨමාලා
+                            Text Courses
                         </div>
                         <h1 className="text-4xl md:text-6xl font-black font-outfit text-white mb-6">Course Collections</h1>
                         <p className="text-gray-400 max-w-2xl text-lg leading-relaxed">
-                            ඔබේ වේගයෙන් කියවා තේරුම් ගත හැකි පරිදි සකස් කරන ලද උසස් පෙළ පාඨමාලා මාලාව.
+                            ඔබේ වේගයෙන් කියවා තේරුම් ගත හැකි පරිදි සකස් කරන ලද Text Courses.
                         </p>
                     </div>
 
@@ -35,7 +35,7 @@ export default async function TextCoursesPage() {
                             <div className="w-20 h-20 bg-white/5 rounded-3xl flex items-center justify-center mx-auto mb-6">
                                 <BookOpen className="text-gray-600" size={40} />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-500">පවතින පාඨමාලා නොමැත</h3>
+                            <h3 className="text-xl font-bold text-gray-500">පවතින Courses නොමැත</h3>
                             <p className="text-gray-600 mt-2">කරුණාකර පසුව නැවත පරීක්ෂා කරන්න.</p>
                         </div>
                     ) : (

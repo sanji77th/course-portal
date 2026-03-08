@@ -31,7 +31,7 @@ export default async function ModuleContentPage({ params }: { params: Promise<{ 
     const nextModule = currentIndex < (siblingModules?.length ?? 0) - 1 ? siblingModules?.[currentIndex + 1] : null;
 
     return (
-        <div className="min-h-screen flex flex-col pt-32">
+        <div className="min-h-screen flex flex-col pt-24">
             <Navbar />
 
             <main className="flex-1 px-6 pb-20">
@@ -39,14 +39,14 @@ export default async function ModuleContentPage({ params }: { params: Promise<{ 
 
                     {/* Main Content Area */}
                     <div className="flex-1">
-                        <div className="mb-10">
+                        <div className="mb-6">
                             <Link href={`/text-courses/${slug}`} className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-bold mb-4 group">
                                 <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                                 මොඩියුල ලැයිස්තුවට (Modules List)
                             </Link>
                             <div className="flex items-center justify-between mb-4">
                                 <div className="px-3 py-1 rounded-full glass border-white/5 bg-white/5 text-xs font-bold text-gray-500 uppercase tracking-widest">
-                                    පෙළ පාඨමාලාව - {module.text_courses?.title_si}
+                                    Text Course - {module.text_courses?.title_si}
                                 </div>
                                 <div className="flex items-center gap-4 text-gray-400">
                                     <button className="p-2 rounded-full hover:bg-white/5 transition-colors"><Share2 size={18} /></button>
@@ -56,18 +56,14 @@ export default async function ModuleContentPage({ params }: { params: Promise<{ 
                             <h1 className="text-4xl md:text-5xl font-black font-outfit text-white mb-4 leading-tight">
                                 {module.title_si}
                             </h1>
-                            <div className="w-20 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-violet-600 mb-10" />
+                            <div className="w-20 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-violet-600 mb-6" />
                         </div>
 
                         {/* Content */}
-                        <div className="glass-card p-10 md:p-14 rounded-[3rem] prose prose-invert prose-indigo max-w-none shadow-2xl overflow-hidden leading-relaxed">
-                            {/* 
-                   Using dangerouslySetInnerHTML for rich text content. 
-                   Real implementation would use a Markdown renderer like 'react-markdown'.
-                */}
+                        <div className="glass-card px-4 pb-2 pt-0 md:px-6 md:pb-10 md:pt-0 rounded-[3rem] prose prose-invert prose-indigo max-w-none shadow-2xl overflow-hidden leading-relaxed [&>div>*:first-child]:mt-0">
                             <div
                                 className="text-gray-300 text-lg md:text-xl space-y-8"
-                                dangerouslySetInnerHTML={{ __html: module.content_si.replace(/\n/g, '<br/>') }}
+                                dangerouslySetInnerHTML={{ __html: module.content_si.trim().replace(/\n/g, '<br/>') }}
                             />
                         </div>
 

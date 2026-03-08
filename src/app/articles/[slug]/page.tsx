@@ -65,10 +65,10 @@ export default async function ArticleContentPage({ params }: { params: Promise<{
 
                     {/* Content Area */}
                     <div className="w-full prose prose-invert prose-emerald max-w-none shadow-2xl overflow-hidden leading-relaxed animate-in fade-in duration-1000 delay-300">
-                        <div className="glass-card p-10 md:p-20 rounded-[4rem] border border-white/5 space-y-8 bg-gradient-to-br from-emerald-950/20 to-transparent">
+                        <div className="glass-card px-6 py-8 md:px-12 md:py-12 rounded-[4rem] border border-white/5 bg-gradient-to-br from-emerald-950/20 to-transparent">
                             <div
                                 className="text-gray-300 text-xl md:text-2xl font-medium leading-relaxed"
-                                dangerouslySetInnerHTML={{ __html: article.content_si.replace(/\n/g, '<br/>') }}
+                                dangerouslySetInnerHTML={{ __html: article.content_si.trim().replace(/\n/g, '<br/>') }}
                             />
                         </div>
                     </div>

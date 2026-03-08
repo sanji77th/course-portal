@@ -60,9 +60,9 @@ export default async function ModuleContentPage({ params }: { params: Promise<{ 
                         </div>
 
                         {/* Content */}
-                        <div className="glass-card px-4 pb-2 pt-0 md:px-6 md:pb-10 md:pt-0 rounded-[3rem] prose prose-invert prose-indigo max-w-none shadow-2xl overflow-hidden leading-relaxed [&>div>*:first-child]:mt-0">
+                        <div className="glass-card px-4 pb-6 pt-0 md:px-10 md:pb-10 md:pt-0 rounded-[3rem] shadow-2xl overflow-hidden leading-relaxed">
                             <div
-                                className="text-gray-300 text-lg md:text-xl space-y-8"
+                                className="text-gray-300 text-lg md:text-xl prose prose-invert prose-indigo max-w-none [&>*:first-child]:mt-0"
                                 dangerouslySetInnerHTML={{ __html: module.content_si.trim().replace(/\n/g, '<br/>') }}
                             />
                         </div>

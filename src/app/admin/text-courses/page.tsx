@@ -326,8 +326,23 @@ export default function AdminTextCoursesPage() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-xs font-bold text-gray-500 uppercase tracking-widest pl-1">Content (Rich Text / HTML / Markdown)</label>
-                                <textarea value={modContent} onChange={(e) => setModContent(e.target.value)} required rows={15} placeholder="පාඩමේ අන්තර්ගතය මෙතැන ලියන්න..." className="w-full px-5 py-4 rounded-3xl glass border border-white/10 text-white outline-none focus:border-indigo-500 text-lg leading-relaxed resize-none" />
+                                <div className="flex items-center justify-between pl-1">
+                                    <label className="text-xs font-bold text-gray-500 uppercase tracking-widest">Content (Rich Text / HTML / Markdown)</label>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            const url = window.prompt("Enter Image URL (Google Photos, Imgur, etc.):");
+                                            if (url) {
+                                                const imgTag = `\n<img src="${url}" alt="Course Image" className="w-full rounded-[2rem] shadow-2xl border border-white/10 my-8" />\n`;
+                                                setModContent(prev => prev + imgTag);
+                                            }
+                                        }}
+                                        className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20 text-xs font-bold transition-all"
+                                    >
+                                        <ImageIcon size={14} /> Insert Image
+                                    </button>
+                                </div>
+                                <textarea value={modContent} onChange={(e) => setModContent(e.target.value)} required rows={15} placeholder="පාඩමේ අන්තර්ගතය මෙතැන ලියන්න..." className="w-full px-5 py-4 rounded-3xl glass border border-white/10 text-white outline-none focus:border-indigo-500 text-lg leading-relaxed resize-none font-mono text-sm" />
                             </div>
 
                             <div className="flex items-center justify-end gap-4">

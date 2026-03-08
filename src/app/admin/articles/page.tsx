@@ -210,14 +210,29 @@ export default function AdminArticlesPage() {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold text-gray-500 uppercase tracking-widest pl-1">Article Content</label>
+                                    <div className="flex items-center justify-between pl-1">
+                                        <label className="text-xs font-bold text-gray-500 uppercase tracking-widest pl-1">Article Content</label>
+                                        <button
+                                            type="button"
+                                            onClick={() => {
+                                                const url = window.prompt("Enter Image URL (Google Photos, Imgur, etc.):");
+                                                if (url) {
+                                                    const imgTag = `\n<img src="${url}" alt="Article Image" className="w-full rounded-[2rem] shadow-2xl border border-white/10 my-8" />\n`;
+                                                    setContent(prev => prev + imgTag);
+                                                }
+                                            }}
+                                            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20 text-xs font-bold transition-all"
+                                        >
+                                            <ImageIcon size={14} /> Insert Image
+                                        </button>
+                                    </div>
                                     <textarea
                                         value={content}
                                         onChange={(e) => setContent(e.target.value)}
                                         required
                                         placeholder="ඔබේ ලිපියේ අන්තර්ගතය මෙතැන ඇතුළත් කරන්න..."
                                         rows={10}
-                                        className="w-full px-5 py-4 rounded-3xl glass border border-white/10 text-white outline-none focus:border-indigo-500 transition-all text-lg leading-relaxed resize-none"
+                                        className="w-full px-5 py-4 rounded-3xl glass border border-white/10 text-white outline-none focus:border-indigo-500 transition-all text-lg leading-relaxed resize-none font-mono text-sm"
                                     />
                                 </div>
                             </div>
